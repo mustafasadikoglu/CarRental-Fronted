@@ -3,8 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Car } from '../models/car';
 import { CarDetail } from '../models/carDetails';
+import { CarImage } from '../models/carImage';
 import { GetResponseModel } from '../models/getResponseModel';
-import { CarImage } from '../models/image';
+
 import { ListResponseModel } from '../models/listResponseModel';
 
 @Injectable({

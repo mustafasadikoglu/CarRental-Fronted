@@ -1,5 +1,15 @@
-<ul class="list-group mt-4">
+<!-- <ul class="list-group mt-4">
     <li class="list-group-item list-group-item-action list-group-item-dark">Colors</li>
     <li (click)="setCurrentColor(color)"  routerLink="cars/color/{{color.id}}" class="list-group-item" *ngFor="let color of colors">{{color.name}}</li>
 </ul>
 
+ -->
+ <div class="container">
+<div id="jquery-accordion-menu" class="jquery-accordion-menu">
+    <div class="jquery-accordion-menu-header">Colors </div>
+    <ul>
+        <li routerLink="cars/color/{{color.id}}" *ngFor="let color of colors" class="active"><a>{{color.name}}</a>
+        </li>
+    </ul>
+</div>
+</div>

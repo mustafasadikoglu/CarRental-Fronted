@@ -1,4 +1,5 @@
-import { CarImage } from './image';
+import { CarImage } from "./carImage";
+
 export interface CarDetail {
   carId: number;
   colorId: number;
@@ -10,7 +11,7 @@ export interface CarDetail {
   modelYear: number;
   description: string;
   imagePath: string;
-  image: CarImage[];
+  carImage: CarImage[];
 }
 
 // public int CarId { get; set; }

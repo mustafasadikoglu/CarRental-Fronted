@@ -1,7 +1,19 @@
-<ul class="list-group">
+<!-- <ul class="list-group">
     <li routerLink="/cars" class="list-group-item list-group-item-action list-group-item-dark">Brands</li>
     <li (click)="setCurrentBrand(brand)" 
     routerLink="cars/brand/{{brand.id}}" class="list-group-item"
         *ngFor="let brand of brands">{{brand.name}}
     </li>
-</ul>
+</ul> -->
+
+
+<div class="container">
+    <div id="jquery-accordion-menu" class="jquery-accordion-menu">
+        <div routerLink="/cars" class="jquery-accordion-menu-header">Brands </div>
+        <ul>
+            <li  routerLink="cars/brand/{{brand.id}}" *ngFor="let brand of brands" class="active"><a >{{brand.name}}</a>
+            </li>
+        </ul>
+    </div>
+   
+</div>
