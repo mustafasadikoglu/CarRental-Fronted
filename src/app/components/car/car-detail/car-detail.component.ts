@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Car } from 'src/app/models/car';
-import { CarDetail } from 'src/app/models/carDetails';
 import { CarImageService } from 'src/app/services/car-image.service';
 import { CarService } from 'src/app/services/car.service';
 import {NgxGalleryOptions} from '@kolkov/ngx-gallery';

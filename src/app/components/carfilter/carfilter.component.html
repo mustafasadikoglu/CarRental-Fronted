@@ -1,0 +1,15 @@
+<select (change)="setCurrentBrand()" [(ngModel)]="currentBrand" name="brandSelect" class="form-select col-md-3 mt-5"
+    aria-label="Default select example">
+    <option [ngValue]="allBrand" [selected]="allBrandSelected()" selected>All Brand</option>
+    <option [ngValue]="brand" *ngFor="let brand of brands">{{brand.name}}</option>
+</select>
+
+<select [(ngModel)]="currentColor" (change)="setCurrentColor()" name="colorSelect" class="form-select mt-3"
+    aria-label="Default select example">
+    <option [ngValue]="allColor" [selected]="allColorsSelected()" selected>All Color</option>
+    <option [ngValue]="color" *ngFor="let color of colors">{{color.name}}</option>
+</select>
+<div class="row">
+    <button type="button" (click)="setRoute()" class="btn btn-primary mt-2 ">Filter</button>
+    <button type="button" routerLink="/cars" class="btn btn-primary mt-2 ">Clear Filter</button>
+</div>

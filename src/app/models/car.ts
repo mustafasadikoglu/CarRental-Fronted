@@ -7,11 +7,10 @@ export interface Car {
   brandId: number;
   colorId: number;
   carName: string; 
-  imagePath:string;
   modelYear: number;
   dailyPrice: number;
   description: string;
-  carImages: CarImage[];
+  carImages: CarImage[];   
   brand: Brand;
   color: Color;
 }

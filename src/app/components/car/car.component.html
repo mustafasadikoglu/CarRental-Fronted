@@ -1,0 +1,35 @@
+
+   <label for="filterText" class="form-label">Search</label>
+   <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Search...">
+
+<div *ngIf="filterText.length>2" class="alert alert-success">
+  {{filterText}} searching
+</div>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let carDetail of carsDetailDto | filterPipe:filterText" class="col-sm-4">
+      <div class="card shadow-sm mt-3">
+
+        <img *ngIf="carDetail.imagePath" src="https://localhost:44367/Images/{{ carDetail.imagePath }}"
+          routerLink="/cars/details/{{carDetail.carId}}" style="height:200px" class="card-img-top" alt="" /> 
+          <img *ngIf="!carDetail.imagePath" src="https://localhost:44367/Images/logo.jpg"
+          routerLink="/cars/details/{{carDetail.carId}}" style="height:200px" class="card-img-top" alt="" /> 
+       
+       
+        <div class="card-body">
+          <p class="card-text d-flex justify-content-center">{{carDetail.brandName}} {{carDetail.carName}}</p>
+          <p class="card-text d-flex justify-content-center">{{carDetail.modelYear}}</p>
+          <p class="card-text d-flex justify-content-center">{{carDetail.colorName}}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" routerLink="/cars/detail/{{carDetail.carId}}"y
+                class="btn btn-m btn-outline-secondary ">Detail</button>
+            </div>
+            <p class="text-muted">{{carDetail.dailyPrice}} ₺</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

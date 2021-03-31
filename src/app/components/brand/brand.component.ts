@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Brand } from '../models/brand';
-import { Color } from '../models/color';
-import { BrandService } from '../services/brand.service';
+import { Brand } from 'src/app/models/brand';
+import { Filters } from 'src/app/models/filters';
+import { BrandService } from 'src/app/services/brand.service';
 
 @Component({
   selector: 'app-brand',
@@ -11,6 +11,7 @@ import { BrandService } from '../services/brand.service';
 export class BrandComponent implements OnInit {
   brands: Brand[] = [];
   currentBrand:Brand;
+  
   constructor(private brandService: BrandService) {}
 
   ngOnInit(): void {
@@ -25,4 +26,5 @@ export class BrandComponent implements OnInit {
   setCurrentBrand(brand: Brand) {
     this.currentBrand=brand;        
   }
+  
 }
