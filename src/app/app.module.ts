@@ -18,6 +18,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { CarAddComponent } from './components/car-add/car-add.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { BrandAddComponent } from './components/brand-add/brand-add.component';
+import { ColorAddComponent } from './components/color-add/color-add.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ProfileComponent } from './components/auth/profile/profile.component';
+import { RentalComponent } from './components/rental/rental.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,11 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     CarfilterComponent,
     LoginComponent,
     CarAddComponent,
+    BrandAddComponent,
+    ColorAddComponent,
+    RegisterComponent,
+    ProfileComponent,
+    RentalComponent,
   ],
   imports: [
     BrowserModule,

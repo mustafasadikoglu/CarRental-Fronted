@@ -5,16 +5,19 @@ import { Brand } from '../models/brand';
 import { ListResponseModel } from '../models/listResponseModel';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BrandService {
-  apiUrl='https://localhost:44367/api/brands/getall';
-  constructor(private httpClient:HttpClient) { }
+  apiUrl = 'https://localhost:44367/api/brands/';
+  constructor(private httpClient: HttpClient) {}
 
-
-  getBrands():Observable<ListResponseModel<Brand>>{
-    return this.httpClient.get<ListResponseModel<Brand>>(this.apiUrl);
+  getBrands(): Observable<ListResponseModel<Brand>> {
+    let newPath = 'getall';
+    return this.httpClient.get<ListResponseModel<Brand>>(this.apiUrl + newPath);
   }
 
- 
+  add(brand: Brand) {
+    let newPath = 'add';
+    return this.httpClient.post(this.apiUrl + newPath, brand);
+  }
 }

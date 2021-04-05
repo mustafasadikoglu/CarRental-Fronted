@@ -9,12 +9,18 @@ import { ListResponseModel } from '../models/listResponseModel';
 })
 export class ColorService {
 
-  apiUrl='https://localhost:44367/api/colors/getall';
+  apiUrl='https://localhost:44367/api/colors/';
   constructor(private httpClient:HttpClient) { }
 
 
   getColors():Observable<ListResponseModel<Color>>{
-    return this.httpClient.get<ListResponseModel<Color>>(this.apiUrl);
+    let newPath="getall"
+    return this.httpClient.get<ListResponseModel<Color>>(this.apiUrl+newPath);
+  }
+
+  add(color: Color) {
+    let newPath = 'add';
+    return this.httpClient.post(this.apiUrl + newPath, color);
   }
 
   

@@ -1,0 +1,71 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">User Register</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="registerForm">
+                    <div class="mb-3">
+                        <label for="firstName">First Name</label>
+                        <div class="form-group">
+                            <input type="text" id="name" formControlName="firstName" class="form-control"
+                                placeholder="First Name" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName">Last Name</label>
+                        <div class="form-group">
+                            <input type="text" id="lastName" formControlName="lastName" class="form-control"
+                                placeholder="Last Name" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name">Email</label>
+                        <div class="form-group">
+                            <input type="text" id="email" formControlName="email" class="form-control"
+                                placeholder="Email" />
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password">Password</label>
+                        <div class="form-group">
+                            <input type="password" id="password" formControlName="password" class="form-control"
+                                placeholder="Password" />
+                            <span class="help-block"
+                                *ngIf="registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched">
+                                Şifre gerekli
+                            </span>
+                            <span class="help-block"
+                                *ngIf="registerForm.get('password')?.hasError('minlength') && registerForm.get('password')?.touched">
+                                Şifre en az 4 karakter olmalıdır
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword">Re Password</label>
+                        <div class="form-group">
+                            <input type="password" id="confirmPassword" formControlName="confirmPassword"
+                                class="form-control" placeholder="Confirm Password" />
+                            <span class="help-block"
+                                *ngIf="registerForm.get('confirmPassword')?.hasError('required') && registerForm.get('confirmPassword')?.touched">
+                                Şifre doğrulama gerekli
+                            </span>
+                            <span class="help-block" *ngIf="registerForm.get('confirmPassword')?.touched 
+                                    && registerForm.hasError('mismatch')">
+                                Şifreler uyumsuz
+                            </span>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" [disabled]="!registerForm.valid" (click)="register()">Register</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
