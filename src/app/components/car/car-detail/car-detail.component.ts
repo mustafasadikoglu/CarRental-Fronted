@@ -7,6 +7,7 @@ import {NgxGalleryOptions} from '@kolkov/ngx-gallery';
 import {NgxGalleryImage} from '@kolkov/ngx-gallery';
 import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
 import { CarImage } from 'src/app/models/carImage';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-car-detail',
@@ -23,7 +24,8 @@ export class CarDetailComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private carService: CarService,
-    private imageService: CarImageService
+    private imageService: CarImageService,
+    private authService:AuthService
   ) {}
 
   ngOnInit(): void {
@@ -83,5 +85,9 @@ export class CarDetailComponent implements OnInit {
     ];
 
     this.galleryImages = this.getImages()
+  }
+
+  isAuthenticated(){
+    return this.authService.isAuthenticated();
   }
 }

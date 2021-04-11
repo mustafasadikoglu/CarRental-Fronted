@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Color } from '../models/color';
 import { ListResponseModel } from '../models/listResponseModel';
+import { SingleResponseModel } from '../models/singleResponseModel';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,16 @@ export class ColorService {
 
   add(color: Color) {
     let newPath = 'add';
+    return this.httpClient.post(this.apiUrl + newPath, color);
+  }
+
+  getColorById(id:number):Observable<SingleResponseModel<Color>>{
+    let newPath="getcolorbyid?id="+id;
+    return this.httpClient.get<SingleResponseModel<Color>>(this.apiUrl+newPath);
+  }
+
+  update(color:Color){
+    let newPath = 'update';
     return this.httpClient.post(this.apiUrl + newPath, color);
   }
 

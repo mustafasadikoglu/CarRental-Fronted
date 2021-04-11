@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark text-white " style="background:#414956">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Rental Car</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -15,6 +15,15 @@
           <a class="nav-link active" aria-current="page" routerLink="cars/add">Car Add</a>
         </li>
         <li *ngIf="isAuthenticated()" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="carlist">Car List</a>
+        </li>
+        <li *ngIf="isAuthenticated()" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="brandlist">Brand List</a>
+        </li>
+        <li *ngIf="isAuthenticated()" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="colorlist">Color List</a>
+        </li>
+        <li *ngIf="isAuthenticated()" class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="brands/add">Brand Add</a>
         </li>
         <li *ngIf="isAuthenticated()" class="nav-item">
@@ -24,28 +33,12 @@
           <a class="nav-link active" aria-current="page" routerLink="rentals/">Rentals List</a>
         </li>
 
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>       
-          <li *ngIf="!isAuthenticated()" class="nav-item">
-            <a class="nav-link active " aria-current="page" routerLink="login">Login</a>
-          </li>
-          <li *ngIf="!isAuthenticated()" class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="register">Register</a>
-          </li>
-        
+        <li *ngIf="!isAuthenticated()" class="nav-item float-right">
+          <a class="nav-link active " aria-current="page" routerLink="login">Login</a>
+        </li>
+        <li *ngIf="!isAuthenticated()" class="nav-item float-right">
+          <a class="nav-link active" aria-current="page" routerLink="register">Register</a>
+        </li>
       </ul>
 
 
@@ -59,18 +52,20 @@
           <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
             <div class="dropdown-item cursor-none">
               <i class="bi-check2 me-1"></i>
-              {{ getCurrentCustomer().findexPoint }} Findex Puanı
+              {{ getCurrentCustomer().findexPoint }} Findex Score
             </div>
 
             <hr class="dropdown-divider">
 
-            <div class="dropdown-item" routerLink="/profile">
-              <i class="bi-pencil me-1"></i> Profili Düzenle
+            <div class="dropdown-item text-center" routerLink="/profile">
+              <a routerLink class="bi-pencil me-1"></a> Edit Profile
             </div>
 
-            <div (click)="logOut()" class="dropdown-item">
-              <i class="bi-box-arrow-right me-1"></i> Çıkış Yap
-            </div>
+            <a style="text-decoration: none;" routerLink>
+              <div (click)="logOut()" class="dropdown-item text-center">
+                <i class="bi-box-arrow-right me-1"></i> Exit
+              </div>
+            </a>
           </div>
         </div>
       </div>

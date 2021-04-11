@@ -23,6 +23,15 @@ import { ColorAddComponent } from './components/color-add/color-add.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/auth/profile/profile.component';
 import { RentalComponent } from './components/rental/rental.component';
+import { CarRentComponent } from './components/car/car-rent/car-rent.component';
+import { CardComponent } from './components/card/card.component';
+import { CardSavedComponent } from './components/card/card-saved/card-saved.component';
+import { CarlistComponent } from './components/car/carlist/carlist.component';
+import { CarUpdateComponent } from './components/car/car-update/car-update.component';
+import { BrandUpdateComponent } from './components/brand/brand-update/brand-update.component';
+import { BrandListComponent } from './components/brand/brand-list/brand-list.component';
+import { ColorListComponent } from './components/color/color-list/color-list.component';
+import { ColorUpdateComponent } from './components/color/color-update/color-update.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +50,16 @@ import { RentalComponent } from './components/rental/rental.component';
     RegisterComponent,
     ProfileComponent,
     RentalComponent,
+    CarRentComponent,
+    CardComponent,
+    CardSavedComponent,
+    CarlistComponent,
+    CarUpdateComponent,
+    BrandUpdateComponent,
+    BrandListComponent,
+    ColorListComponent,
+    ColorUpdateComponent,
+    
   ],
   imports: [
     BrowserModule,

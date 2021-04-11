@@ -1,10 +1,11 @@
 <div class="row text-center body">
-    <div class="col-lg-4 mx-auto my-auto">
-       <div class="display-6 mb-4">Güncelle</div>
+    <div class="col-lg-8 mx-auto my-auto">
+       <div class="display-6 mb-4">Update</div>
  
        <div class="card rounded-0 shadow">
           <div class="card-header fw-bold">
-             <i class="bi-bullseye me-2"></i> <span>Kişisel Bilgileriniz</span>
+             <i class="bi-bullseye me-2"></i> <span>Personal Information
+            </span>
           </div>
           <div class="card-body">
  
@@ -14,14 +15,14 @@
                       <div class="form-floating mb-3">
                          <input type="text" class="form-control" id="firstName"
                                 formControlName="firstName" placeholder="firstName">
-                         <label for="firstName">Adınız *</label>
+                         <label for="firstName">Name *</label>
                       </div>
                    </div>
                    <div class="col-lg-6">
                       <div class="form-floating mb-3">
                          <input type="text" class="form-control" id="lastName"
                                 formControlName="lastName" placeholder="lastName">
-                         <label for="lastName">Soyadınız *</label>
+                         <label for="lastName">Surname *</label>
                       </div>
                    </div>
                 </div>
@@ -29,35 +30,43 @@
                 <div class="form-floating mb-3">
                    <input type="text" class="form-control" id="companyName"
                           formControlName="companyName" placeholder="companyName">
-                   <label for="companyName">Şirket Adı</label>
+                   <label for="companyName">Company Name</label>
                 </div>
  
                 <div class="form-floating mb-3">
                    <input type="email" class="form-control" id="email"
                           formControlName="email" placeholder="email">
-                   <label for="email">E-Posta Adresiniz *</label>
+                   <label for="email">E-Mail *</label>
                 </div>
-                <span class="badge rounded-pill bg-primary mb-2">Eğer şifrenizi yenilemek istiyorsanız doldurun</span>
+
+                <button class="btn btn-primary rounded-0 col-md-12">
+                  <i class="bi-plus-square me-1"></i> Update
+               </button>
+
+
+               <br>  
+
+                <h3 class="mt-3">Password Change</h3>
 
 
                 <div class="form-floating mb-3">
                    <input type="password" class="form-control" id="password"
                           formControlName="password" placeholder="password">
-                   <label for="password">Şifreniz </label>
+                   <label for="password">Password </label>
                 </div>
 
                 <div class="form-floating mb-3">
                    <input type="password" class="form-control" id="confirmPassword"
                           formControlName="confirmPassword" placeholder="confirmPassword">
-                   <label for="confirmPassword">Şifrenizi Onaylayın </label>
+                   <label for="confirmPassword">RePasword </label>
                 </div>
  
                 <div class="row">
                    
-                   <div class="col-lg-6">
+                   <div class="col-md-12">
                       <div class="d-grid">
                          <button class="btn btn-primary rounded-0">
-                            <i class="bi-plus-square me-1"></i> Güncelle
+                            <i class="bi-plus-square me-1"></i> Update
                          </button>
                       </div>
                    </div>

@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>ModelYear</th>            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let car of cars ">
+            <td>{{car.id}}</td>
+            <td>{{car.carName }}</td>
+            <td>{{car.modelYear}}</td>           
+            <td><button routerLink="/cars/update/{{car.id}}"  class="btn btn-primary">Düzenle</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,34 @@
+<div class="row mt-4">
+    <div class="col-lg-9">
+ 
+       <div class="card rounded-0">
+          <div class="card-header fw-bold">
+             <i class="bi-save me-1"></i> Color Update
+          </div>
+          <div class="card-body">
+             <form autocomplete="off" *ngIf="color" [formGroup]="colorUpdateForm" (ngSubmit)="update()">
+               
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="brand.name"
+                           formControlName="name">
+                    <label for="name">{{color.name}} </label>
+                 </div>                
+                <div class="text-end">
+                   <button type="submit" class="btn btn-primary">
+                      <i class="bi-save2 me-1"></i> Update
+                   </button>
+                </div>
+             </form>
+          </div>
+       </div>
+ 
+    </div>
+    <div class="col-lg-3">
+       <div class="d-grid">
+          <button class="btn btn-primary" routerLink="/brandlist">
+             <i class="bi-list me-1"></i>  Listele
+          </button>
+       </div>
+    </div>
+ </div>
+ 
