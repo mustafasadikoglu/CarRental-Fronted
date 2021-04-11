@@ -142,7 +142,9 @@ export class CardComponent implements OnInit {
     return true;
   }
   setSelectedCard(cardOnEventing: Card) {
-    this.card = Object.assign(cardOnEventing, { save: false });
-    this.cardAddForm.setValue(this.card);
+    this.card = Object.assign(cardOnEventing, { save: false });    
+    this.rentedCar = Object.assign({}, this.rentalService.getRentingCar());
+    this.addRental(this.rentedCar)          
+   
   }
 }

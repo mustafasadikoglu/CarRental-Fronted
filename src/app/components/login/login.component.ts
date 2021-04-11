@@ -37,10 +37,8 @@ export class LoginComponent implements OnInit {
     });
   }
   login() {
-    if (this.loginForm.valid) {
-      console.log(this.loginForm.valid);
+    if (this.loginForm.valid) {     
       let loginModel = Object.assign({}, this.loginForm.value);
-
       this.authService.login(loginModel).subscribe(
         (response) => {
           this.toastrService.info(response.message);

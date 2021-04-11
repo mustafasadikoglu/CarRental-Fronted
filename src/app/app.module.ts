@@ -16,10 +16,8 @@ import { CarfilterComponent } from './components/carfilter/carfilter.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-import { CarAddComponent } from './components/car-add/car-add.component';
-import { AuthInterceptor } from './interceptors/auth.interceptor';
-import { BrandAddComponent } from './components/brand-add/brand-add.component';
-import { ColorAddComponent } from './components/color-add/color-add.component';
+import { BrandAddComponent } from './components/brand/brand-add/brand-add.component';
+import { ColorAddComponent } from './components/color/color-add/color-add.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/auth/profile/profile.component';
 import { RentalComponent } from './components/rental/rental.component';
@@ -32,6 +30,9 @@ import { BrandUpdateComponent } from './components/brand/brand-update/brand-upda
 import { BrandListComponent } from './components/brand/brand-list/brand-list.component';
 import { ColorListComponent } from './components/color/color-list/color-list.component';
 import { ColorUpdateComponent } from './components/color/color-update/color-update.component';
+import { CustomerRentalComponent } from './components/customer-rental/customer-rental.component';
+import { CarAddComponent } from './components/car/car-add/car-add.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { ColorUpdateComponent } from './components/color/color-update/color-upda
     BrandListComponent,
     ColorListComponent,
     ColorUpdateComponent,
+    CustomerRentalComponent,
     
   ],
   imports: [

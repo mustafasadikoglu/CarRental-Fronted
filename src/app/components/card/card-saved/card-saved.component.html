@@ -1,0 +1,32 @@
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<h2 class="mt-5">My Saved Card</h2>
+<div class="container">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div *ngFor="let card of cards" class="col-md-12" (click)="selectCard(card.id)">
+                <div class="payment-card">
+                    <i class="fa fa-cc-visa payment-icon-big text-success"></i>
+                    <h2>
+                        {{card.cardNumber}}
+                    </h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <small>
+                                <strong>Expiry date:</strong> {{card.validDate}}
+                            </small>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <small>
+                                <strong>Name:</strong> {{card.cardNameSurname}}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

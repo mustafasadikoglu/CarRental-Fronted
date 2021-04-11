@@ -25,6 +25,10 @@ export class RentalService {
     let newPath = this.apiUrl + 'getrentalbycarid?carId=' + carId;
     return this.httpClient.get<ListResponseModel<Rental>>(newPath);
   }
+  getRentalsByEmail(email: string): Observable<ListResponseModel<RentDetail>> {
+    let newPath = this.apiUrl + 'getrentalsbyemail?email=' + email;
+    return this.httpClient.get<ListResponseModel<RentDetail>>(newPath);
+  }
 
   setRentingCar(rental: Rental) {
     this.rentingCar = rental;

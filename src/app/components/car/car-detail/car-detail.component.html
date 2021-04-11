@@ -1,17 +1,21 @@
 <ngx-gallery *ngIf="galleryImages" [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery">
 </ngx-gallery>
 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-
-    <div class="col-auto d-none d-lg-block">
-        <div *ngIf="car" class="col p-4 d-flex flex-column position-static">
-            <h3 class="mb-0">{{car.carName}}</h3>
-            <div class="mb-1 text-muted">{{car.description}}</div>
-            <div class="mb-1 text-muted">{{car.brand.name}}</div>
-            <p class="card-text mb-auto">{{car.dailyPrice}} ₺</p>
-            <p class="card-text mb-auto">{{car.color.name}} </p>
-            <a href="/cars" class="btn btn-secondary">Back To Cars</a>
+    <div class="col-md-6">
+        <div class="col-auto d-none d-lg-block">
+            <div *ngIf="car" class="col p-4 d-flex flex-column position-static">
+                <h3 class="mb-0">{{car.carName}}</h3>
+                <div class="mb-1 text-muted">{{car.description}}</div>
+                <div class="mb-1 text-muted">{{car.brand.name}}</div>
+                <p class="card-text mb-auto">{{car.color.name}} </p>
+                <p class="card-text mb-auto">{{car.dailyPrice}} ₺</p>             
+               
+                <button class="btn btn-secondary" routerLink="/cars"> Back To Cars</button>
+            </div>
         </div>
     </div>
-    <div *ngIf="isAuthenticated()">
-        <app-car-rent></app-car-rent>
+    <div class="col-md-6">
+        <div *ngIf="isAuthenticated()">
+            <app-car-rent></app-car-rent>
+        </div>
     </div>
